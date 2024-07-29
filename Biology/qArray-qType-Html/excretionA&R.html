@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice NEET assertion-reason type questions on 'Excreatory product and their elimination '. Test your knowledge with 15 key questions to excel in your NEET exam.">
+  <meta name="keywords" content="NEET, NEET quiz, assertion-reason questions, Excretory product and their elimination, NEET preparation, important NEET questions, NEET exam practice">
+  <meta name="author" content="Neet Cafe">
+  <title>NEET Cafe Quiz - Excretory product and their elimination: 15 Key Assertion-Reason Questions</title>
+  <link rel="stylesheet" href="/quiz/quiz.css">
+</head>
+<body>
+  <div class="app">
+    <h1>💥 NEET Cafe Quiz 💥</h1>
+    <div class="quiz">
+      <div class="progress-bar">
+        <span class="progress"></span>
+        <span class="total"></span> 
+      </div>
+      <div id="timer-container">
+        <div id="timer"></div>
+      </div>
+
+      
+      
+      <h2 id="question">Question goes here</h2>
+      
+      <div id="answer-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+
+      <div id="btn-container">
+        <button id="previous-btn">Previous</button>
+        <button id="explain-btn">👁️NCERT</button>
+        <button id="next-btn">Next</button>   
+      </div>
+       
+      <button class="thank-btn">❤️ Thank You ❤️ </button>
+
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p id="explanation-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const questions = [
+  {
+    question: " » Assertion: Reptiles, birds, and insects excrete nitrogenous wastes as uric acid in the form of pellets or paste. <br><br>» Reason: Uric acid, being the least toxic, can be removed with a minimum loss of water.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Uric acid is indeed the least toxic nitrogenous waste and is excreted by reptiles, birds, and insects with minimal water loss, which is essential for these organisms to conserve water."
+  },
+  {
+    question: " » Assertion: Many bony fishes are ammonotelic in nature. <br><br>» Reason: Ammonia, as it is readily soluble, is generally excreted by diffusion across the permeable body surface or through the gill surface as ammonium ions.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Many bony fishes excrete ammonia, which is highly soluble in water and is eliminated efficiently through diffusion across the gills or body surface."
+  },
+  {
+    question: " » Assertion: Nephridia are tubular excretory structures of earthworms that help in osmoregulation. <br><br>» Reason: Nephridia help to remove nitrogenous wastes and maintain fluid and ionic balance.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Nephridia in earthworms are essential for excreting nitrogenous wastes and maintaining osmotic balance in their bodies."
+  },
+  {
+    question: " » Assertion: The malpighian corpuscles, PCT, and DCT of the nephron are situated in the cortical region of the kidney. <br><br>» Reason: In cortical nephrons, the loop of Henle is very long and runs deep into the medulla.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "B",
+    explanation: "The Assertion is true that malpighian corpuscles, PCT, and DCT are located in the cortex. However, the Reason is false because in cortical nephrons, the loop of Henle is short and does not extend deeply into the medulla."
+  },
+  {
+    question: " » Assertion: On average, 1200 ml of blood is filtered by kidneys per minute. <br><br>» Reason: It constitutes roughly 1/5 part of the blood pumped out by each ventricle of the heart in a minute.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. The kidneys filter about 1200 ml of blood per minute, which is approximately 20% of the blood pumped by the heart."
+  },
+  {
+    question: " » Assertion: The JGA plays a complex regulatory role on the kidney. <br><br>» Reason: A fall in glomerular blood flow can activate the JG cells to release renin.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. The Juxtaglomerular Apparatus (JGA) regulates kidney function by releasing renin when blood flow decreases, helping to control blood pressure and glomerular filtration rate."
+  },
+  {
+    question: " » Assertion: Counter-current mechanism helps to maintain a concentration gradient in the medullary interstitium. <br><br>» Reason: Interstitial gradient helps in the easy passage of water from the collecting tubule thereby concentrating the filtrate.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. The counter-current mechanism creates a concentration gradient in the medulla, which facilitates water reabsorption from the collecting ducts and concentrates the urine."
+  },
+  {
+    question: " » Assertion: Reabsorption is maximum in the ascending limb of the loop of Henle. <br><br>» Reason: This region plays an insignificant role in the maintenance of high osmolarity of the medullary interstitial fluid.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "B",
+    explanation: "The Assertion is false because reabsorption is not maximum in the ascending limb; this limb is involved in creating the osmotic gradient, not in reabsorption. The Reason is true, as the ascending limb plays a role in maintaining osmolarity but does not primarily handle reabsorption."
+  },
+  {
+    question: " » Assertion: Substances like glucose, amino acids, and Na+ in the glomerular filtrate are reabsorbed actively. <br><br>» Reason: Nitrogenous wastes and water in the glomerular filtrate are absorbed by passive transport.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "B",
+    explanation: "The Assertion is true because glucose, amino acids, and Na+ are actively reabsorbed. The Reason is also true, but not the correct explanation, as nitrogenous wastes and water are reabsorbed through different mechanisms, with water primarily by passive transport and nitrogenous wastes being eliminated."
+  },
+  {
+    question: " » Assertion: ANF mechanism acts as a check on the renin-angiotensin mechanism. <br><br>» Reason: ANF can cause vasodilation and thereby decrease blood pressure.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Atrial Natriuretic Factor (ANF) counters the renin-angiotensin system by causing vasodilation, which reduces blood pressure."
+  },
+  {
+    question: " » Assertion: Other than kidneys, lungs also help in the elimination of excretory wastes. <br><br>» Reason: Our lungs remove a large amount of CO2 and significant quantities of water every day.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Lungs assist in the removal of carbon dioxide and water, contributing to the body's excretory functions beyond the kidneys."
+  },
+  {
+    question: " » Assertion: Analysis of urine helps in the chemical diagnosis of many metabolic disorders as well as malfunctioning of kidneys. <br><br>» Reason: Presence of glucose and ketone bodies in urine are indicative of diabetes mellitus.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Urine analysis can reveal the presence of glucose and ketone bodies, which are key indicators of diabetes mellitus and other metabolic disorders."
+  },
+  {
+    question: " » Assertion: Sebaceous glands eliminate certain substances like sterols, hydrocarbons, and waxes through sebum. <br><br>» Reason: This secretion provides a protective oily covering for the skin.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Sebaceous glands secrete sebum, which contains sterols, hydrocarbons, and waxes, and provides an oily protective layer on the skin."
+  },
+  {
+    question: " » Assertion: Kidney transplantation is the ultimate method in the correction of acute renal failures. <br><br>» Reason: A functioning kidney is used in transplantation from a donor, preferably a close relative.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Kidney transplantation is often used to treat severe renal failure, and ideally, a functioning kidney from a compatible donor is used."
+  },
+  {
+    question: " » Assertion: The hormone aldosterone increases the absorption of Na+ by the nephron. <br><br>» Reason: To maintain the pH of blood, the kidney secretes H+ ions.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Both the Assertion and Reason are true. Aldosterone increases sodium reabsorption in the nephron, and the kidneys also secrete H+ ions to help maintain blood pH."
+  }
+];
+</script>
+<script src="/quiz/quiz.js"></script>
+</body>
+    </html>

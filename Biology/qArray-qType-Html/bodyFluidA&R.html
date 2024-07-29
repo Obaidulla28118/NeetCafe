@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice NEET assertion-reason type questions on 'Body Fluid and Circulation'. Test your knowledge with 15 key questions to excel in your NEET exam.">
+  <meta name="keywords" content="NEET, NEET quiz, assertion-reason questions, Body Fluid and Circulation, NEET preparation, important NEET questions, NEET exam practice">
+  <meta name="author" content="Neet Cafe">
+  <title>NEET Cafe Quiz - Body Fluid and Circulation: 15 Key Assertion-Reason Questions</title>
+  <link rel="stylesheet" href="/quiz/quiz.css">
+  <link rel="canonical" href="https://yourwebsite.com/quiz/body-fluid-and-circulation">
+</head>
+<body>
+  <div class="app">
+    <h1>💥 NEET Cafe Quiz 💥</h1>
+    <div class="quiz">
+      <div class="progress-bar">
+        <span class="progress"></span>
+        <span class="total"></span> 
+      </div>
+      <div id="timer-container">
+        <div id="timer"></div>
+      </div>
+
+      
+      
+      <h2 id="question">Question goes here</h2>
+      
+      <div id="answer-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+
+      <div id="btn-container">
+        <button id="previous-btn">Previous</button>
+        <button id="explain-btn">👁️NCERT</button>
+        <button id="next-btn">Next</button>   
+      </div>
+       
+      <button class="thank-btn">❤️ Thank You ❤️ </button>
+
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p id="explanation-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const questions = [
+  {
+    question: " » Assertion: Heart failure sometimes called congestive heart failure. <br><br>» Reason: Congestion of the lungs is one of the main symptoms of this disease.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Heart failure, often called congestive heart failure, is indeed characterized by congestion of the lungs among other symptoms."
+  },
+  {
+    question: " » Assertion: RBCs are responsible for transportation of CO2 from tissue to lungs. <br><br>» Reason: Carbonic anhydrase is the fastest catalyst in RBCs.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "RBCs transport CO2 from tissues to the lungs, and carbonic anhydrase in RBCs facilitates this process effectively."
+  },
+  {
+    question: " » Assertion: All the veins carry deoxygenated blood to the Atria of heart. <br><br>» Reason: Heart pumps oxygenated blood into the pulmonary artery.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "While most veins carry deoxygenated blood to the heart, the pulmonary veins are an exception as they carry oxygenated blood. The heart pumps oxygenated blood into the pulmonary artery."
+  },
+  {
+    question: " » Assertion: Blood pumped to ventricles do not enter back to atria. <br><br>» Reason: Chordae tendinae present in the wall of the heart, hold the valves of the heart.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Blood pumped into the ventricles does not return to the atria due to the functioning of the heart valves, which are held in place by the chordae tendinae."
+  },
+  {
+    question: " » Assertion: Cardiac output of an athlete will be much higher than that of an ordinary man during exercise. <br><br>» Reason: They have altered the stroke volume as well as the heart rate and thereby the cardiac output.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Athletes typically have a higher cardiac output during exercise due to their increased stroke volume and heart rate."
+  },
+  {
+    question: " » Assertion: Humans have a complete double circulation. <br><br>» Reason: Two circulatory pathways, namely pulmonary and systemic, are present.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Humans have a complete double circulation consisting of the pulmonary and systemic circuits."
+  },
+  {
+    question: " » Assertion: Right atrio-ventricular valve is called tricuspid valve. <br><br>» Reason: It is formed of three muscular flaps or cusps.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "The right atrio-ventricular valve, known as the tricuspid valve, has three cusps."
+  },
+  {
+    question: " » Assertion: Lymph is a colorless fluid. <br><br>» Reason: Lymph is without most abundant formed elements.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Lymph is colorless and lacks the most abundant formed elements found in blood."
+  },
+  {
+    question: " » Assertion: Erythroblastosis foetalis can be avoided by administering anti-Rh antibodies. <br><br>» Reason: Anti-Rh antibodies will trap the Rh positive RBCs in the mother's blood.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "Anti-Rh antibodies prevent erythroblastosis foetalis by targeting Rh positive cells, but they do not trap them in the mother’s blood."
+  },
+  {
+    question: " » Assertion: Heart failure is the same as cardiac arrest. <br><br>» Reason: In heart failure, the heart stops beating.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "D",
+    explanation: "Heart failure and cardiac arrest are different conditions; in heart failure, the heart does not stop beating but fails to pump effectively."
+  },
+  {
+    question: " » Assertion: Normal activities of the heart are regulated intrinsically. <br><br>» Reason: Specialized muscles (Nodal tissue) present within the heart.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "The intrinsic regulation of heart activities is due to specialized nodal tissues within the heart."
+  },
+  {
+    question: " » Assertion: The state of the heart when it is not pumping blood effectively enough to meet the needs of the body is known as heart failure. <br><br>» Reason: It is common among women.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "Heart failure is a condition where the heart does not pump effectively enough, but it is not specifically more common among women."
+  },
+  {
+    question: " » Assertion: Adrenal medullary hormones can also increase cardiac output. <br><br>» Reason: These hormones increase the rate of heart beat, the strength of ventricular contraction.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "Adrenal medullary hormones increase cardiac output by enhancing heart rate and the strength of ventricular contraction."
+  },
+  {
+      question: " Â» Assertion: Calcium ions play a very important role in blood clotting. <br><br>Â» Reason: Thrombin is an enzyme.",
+      options: {
+        A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+        B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+        C: "Assertion is true but Reason is false.",
+        D: "Both Assertion and Reason are false."
+      },
+      correct_answer: "A",
+      explanation: "Calcium ions are crucial for blood clotting, and thrombin, which is an enzyme, plays a key role in this process."
+    },
+    {
+      question: " » Assertion: Heparin is an anticoagulant present in our blood, preventing coagulation. <br><br> » Reason: Ca++ is an essential factor for clotting.",
+      options: {
+        A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+        B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+        C: "Assertion is true but Reason is false.",
+        D: "Both Assertion and Reason are false."
+      },
+      correct_answer: "B",
+      explanation: "Heparin is an anticoagulant that prevents clotting, but Ca++ is indeed an essential factor for clotting, which is not explained by the presence of heparin."
+    }
+  ];
+</script>
+<script src="/quiz/quiz.js"></script>
+</body>
+    </html>
