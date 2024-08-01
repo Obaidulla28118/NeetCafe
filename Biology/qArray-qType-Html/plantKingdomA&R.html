@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice NEET assertion-reason type questions on 'Plant Kingdom '. Test your knowledge with 10 key questions to excel in your NEET exam.">
+  <meta name="keywords" content="NEET, NEET quiz, assertion-reason questions, Plant Kingdom , NEET preparation, important NEET questions, NEET exam practice">
+  <meta name="author" content="Neet Cafe">
+  <title>NEET Cafe Quiz - Plant Kingdom : 10 Key Assertion-Reason Questions</title>
+  <link rel="stylesheet" href="https//Obaidulla28118.github.io/NeetCafe/quiz.css">
+  
+</head>
+<body>
+  <div class="app">
+    <h1>💥 NEET Cafe Quiz 💥</h1>
+    <div class="quiz">
+      <div class="progress-bar">
+        <span class="progress"></span>
+        <span class="total"></span> 
+      </div>
+      <div id="timer-container">
+        <div id="timer"></div>
+      </div>
+
+      
+      
+      <h2 id="question">Question goes here</h2>
+      
+      <div id="answer-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+
+      <div id="btn-container">
+        <button id="previous-btn">Previous</button>
+        <button id="explain-btn">👁️NCERT</button>
+        <button id="next-btn">Next</button>   
+      </div>
+       
+      <button class="thank-btn">❤️ Thank You ❤️ </button>
+
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p id="explanation-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+ 
+const questions = [
+ 
+
+  {
+    question: "» Assertion: Some bacteria are autotrophs, but the majority of bacteria are heterotrophs. <br><br>» Reason: The vast majority of bacteria depend on other organisms or on dead organic matter for food.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "NCERT Biology states that while some bacteria can produce their own food (autotrophic bacteria), most bacteria are heterotrophs that depend on other organisms or decaying matter for nutrients."
+  },
+  {
+    question: "» Assertion: Many mycoplasmas are pathogenic in animals and plants. <br><br>» Reason: They are the smallest living cells known and can survive without oxygen.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "According to NCERT, mycoplasmas are indeed pathogenic and are noted for being among the smallest known living cells. Their ability to survive without oxygen contributes to their pathogenicity."
+  },
+  {
+    question: "» Assertion: In chrysophytes, the cell walls are indestructible. <br><br>» Reason: The walls are embedded with flagella.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "D",
+    explanation: "NCERT does not support the claim that chrysophytes have indestructible cell walls or that these walls are embedded with flagella. Instead, chrysophytes typically have cell walls with varying levels of rigidity, and flagella are not part of the cell wall structure."
+  },
+  {
+    question: "» Assertion: The bodies of euglenoids are flexible. <br><br>» Reason: They have a soft cell wall.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The NCERT textbook describes euglenoids as having flexible bodies due to a pellicle (a layer of protein) rather than a soft cell wall, making the Reason incorrect."
+  },
+  {
+    question: "» Assertion: Ciliated protozoans are aquatic, actively moving organisms. <br><br>» Reason: They have a cavity (gullet) that opens to the outside of the cell surface.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "According to NCERT Biology, ciliated protozoans are indeed aquatic and actively move. They possess a gullet (or oral groove) that opens to the cell surface, aligning with the given Reason."
+  },
+  {
+    question: "» Assertion: Deuteromycetes are commonly known as imperfect fungi. <br><br>» Reason: Deuteromycetes reproduce only by asexual spores known as conidia. The mycelium is septate and branched.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "The NCERT textbook supports that deuteromycetes are known as imperfect fungi due to their asexual reproduction via conidia, and their mycelium is indeed septate and branched."
+  },
+    {
+    question: "» Assertion: In the two-kingdom classification, organisms were classified into plants and animals, which was easy to understand. However, a large number of organisms did not fall into either category. <br><br>» Reason: This system did not distinguish between eukaryotes and prokaryotes, unicellular and multicellular organisms, and photosynthetic (green algae) and non-photosynthetic (fungi) organisms.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "The NCERT Biology textbook explains that while the two-kingdom classification system was straightforward and easy to understand, it did not accommodate all organisms due to its inability to differentiate between fundamental biological categories, as highlighted by the Reason."
+  },
+  {
+    question: "» Assertion: Viruses are not considered truly ‘living’. <br><br>» Reason: Viruses are non-cellular organisms characterized by having an inert crystalline structure outside the living cell.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "NCERT Biology classifies viruses as non-living entities because they are not cellular and remain inert outside a host cell. This aligns with the Reason provided."
+  },
+  {
+    question: "» Assertion: Lichens are very good pollution indicators. <br><br>» Reason: They do not grow in polluted areas.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "According to NCERT, lichens are excellent indicators of pollution as they are sensitive to pollutants and generally do not grow in areas with high pollution levels."
+  },
+   {
+    question: "» Assertion: The two-kingdom classification system, which was used for a long time, was found inadequate. <br><br>» Reason: In the two-kingdom classification system, there was no distinction between eukaryotes and prokaryotes, unicellular and multicellular organisms, and photosynthetic (green algae) and non-photosynthetic (fungi) organisms.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "A",
+    explanation: "According to the NCERT Biology textbook, the two-kingdom classification system, proposed by Linnaeus, was inadequate because it did not distinguish between different types of organisms, including eukaryotes versus prokaryotes and unicellular versus multicellular organisms. This lack of distinction led to its eventual replacement by more comprehensive systems."
+  },
+]
+</script>
+<script src="https//Obaidulla28118.github.io/NeetCafe/quiz.js"></script>
+</body>
+    </html>
