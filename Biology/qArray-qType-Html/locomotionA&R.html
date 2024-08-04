@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice NEET assertion-reason type questions on 'Locomotion and movement'. Test your knowledge with 15 key questions to excel in your NEET exam.">
+  <meta name="keywords" content="NEET, NEET quiz, assertion-reason questions, Locomotion and movement , NEET preparation, important NEET questions, NEET exam practice">
+  <meta name="author" content="Neet Cafe">
+  <title>NEET Cafe Quiz - Locomotion and movement : 15 Key Assertion-Reason Questions</title>
+  <link rel="stylesheet" href="https://Obaidulla28118.github.io/NeetCafe/quiz.css">
+</head>
+<body>
+  <div class="app">
+    <h1>💥 NEET Cafe Quiz 💥</h1>
+    <div class="quiz">
+      <div class="progress-bar">
+        <span class="progress"></span>
+        <span class="total"></span> 
+      </div>
+      <div id="timer-container">
+        <div id="timer"></div>
+      </div>
+
+      
+      
+      <h2 id="question">Question goes here</h2>
+      
+      <div id="answer-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+
+      <div id="btn-container">
+        <button id="previous-btn">Previous</button>
+        <button id="explain-btn">👁️NCERT</button>
+        <button id="next-btn">Next</button>   
+      </div>
+       
+      <button class="thank-btn">❤️ Thank You ❤️ </button>
+
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p id="explanation-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+const questions = [
+  {
+    question: "» Assertion: Amoeboid movement in unicellular organisms like Amoeba is a simple form of movement. <br><br>» Reason: Streaming of protoplasm in Amoeba is a type of locomotion.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "B",
+    explanation: "The assertion is true because amoeboid movement is indeed a form of movement in Amoeba. The reason is also true as streaming of protoplasm is responsible for this movement, the reason does not justify the assertion ."
+  },
+  {
+    question: "» Assertion: Cilia in Paramecium help in locomotion as well as in the movement of food through the cytopharynx. <br><br>» Reason: Cilia are only involved in the movement of food and not in locomotion.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because cilia do help in both locomotion and food movement. However, the reason is false because cilia are involved in both functions."
+  },
+  {
+    question: "» Assertion: Human beings use limbs, jaws, and tongue for both changes in body posture and locomotion. <br><br>» Reason: Locomotion and movements are separate processes that do not influence each other.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because limbs, jaws, and tongue are involved in both posture changes and locomotion. The reason is false as locomotion and movements are interconnected processes."
+  },
+  {
+    question: "» Assertion: All locomotions are movements, but not all movements are locomotions. <br><br>» Reason: Movements such as ciliary action are a form of locomotion.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true as locomotion is a type of movement, but not all movements (like ciliary action) are locomotions. The reason is false because ciliary action is not considered a form of locomotion."
+  },
+  {
+    question: "» Assertion: Skeletal muscles are striated and under voluntary control. <br><br>» Reason: Skeletal muscles are responsible for involuntary movements.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because skeletal muscles are indeed striated and under voluntary control. However, the reason is false because skeletal muscles are responsible for voluntary movements, not involuntary ones."
+  },
+  {
+    question: "» Assertion: Smooth muscles are found in the inner walls of hollow visceral organs and are not striated. <br><br>» Reason: Smooth muscles are under voluntary control of the nervous system.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true as smooth muscles are found in the walls of hollow organs and are non-striated. The reason is false because smooth muscles are under involuntary control, not voluntary control."
+  },
+  {
+    question: "» Assertion: Cardiac muscles are striated and involuntary in nature. <br><br>» Reason: Cardiac muscle cells have a branching pattern and are controlled directly by the nervous system.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because cardiac muscles are striated and involuntary. The reason is false because although cardiac muscle cells have a branching pattern, they are not directly controlled by the nervous system but by the intrinsic conduction system."
+  },
+  
+  {
+    question: "» Assertion: Myosin heads have ATP binding sites and active sites for actin. <br><br>» Reason: Myosin heads do not participate in ATP hydrolysis during muscle contraction.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true as myosin heads do have ATP binding sites and active sites for actin. However, the reason is false because myosin heads do participate in ATP hydrolysis during muscle contraction."
+  },
+  {
+    question: "» Assertion: The I-band in a sarcomere contains actin filaments and is bisected by the Z-line. <br><br>» Reason: The A-band contains only myosin filaments and does not overlap with actin.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because the I-band contains actin filaments and is bisected by the Z-line. However, the reason is false because the A-band contains overlapping myosin and actin filaments, not only myosin."
+  },
+  {
+    question: "» Assertion: Red muscle fibres contain high amounts of myoglobin and mitochondria. <br><br>» Reason: Red muscle fibres primarily depend on anaerobic processes for ATP production.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true as red muscle fibres do contain high amounts of myoglobin and mitochondria. However, the reason is false because red muscle fibres primarily depend on aerobic processes, not anaerobic ones."
+  },
+  {
+    question: "» Assertion: White muscle fibres appear pale and contain less myoglobin. <br><br>» Reason: White muscle fibres have a high amount of mitochondria and depend on aerobic processes.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because white muscle fibres are indeed pale and have less myoglobin. However, the reason is false as white muscle fibres have fewer mitochondria and primarily depend on anaerobic processes, not aerobic ones."
+  },
+  {
+    question: "» Assertion: Muscle fatigue occurs when the muscle is unable to generate sufficient force. <br><br>» Reason: Muscle fatigue is always caused by an accumulation of lactic acid.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true as muscle fatigue indeed occurs when a muscle cannot generate enough force. The reason is false because while lactic acid accumulation can contribute to fatigue, it is not the sole cause; other factors such as depletion of energy stores and electrolyte imbalance also play a role."
+  },
+
+  {
+    question: "» Assertion: The sliding filament theory explains the mechanism of muscle contraction. <br><br>» Reason: During muscle contraction, the length of the myosin and actin filaments changes.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "C",
+    explanation: "The assertion is true because the sliding filament theory does explain muscle contraction. However, the reason is false because, according to the theory, the length of the myosin and actin filaments does not change; rather, they slide past each other."
+  },
+  {
+    question: "» Assertion: Sarcomeres are the functional units of muscle contraction. <br><br>» Reason: sarcoplasmic reticulum of the muscle fibres is the store house of calcium ions.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "B",
+    explanation: "Both the assertion and reason are true. Sarcomeres are indeed the functional units of muscle contraction and are composed of overlapping thick (myosin) and thin (actin) filaments."
+  },
+  {
+    question: "» Assertion: Actin and myosin filaments are not directly attached to each other in a relaxed muscle. <br><br>» Reason: During contraction, the myosin heads form cross-bridges with actin filaments.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Assertion is true but Reason is false.",
+      D: "Both Assertion and Reason are false."
+    },
+    correct_answer: "B",
+    explanation: "Both the assertion and reason are true. In a relaxed muscle, actin and myosin filaments are not directly attached, but during contraction, myosin heads form cross-bridges with actin filaments to generate contraction."
+  }
+];
+</script>
+<script src="https://Obaidulla28118.github.io/NeetCafe/quiz.js"></script>
+</body>
+          </html>
