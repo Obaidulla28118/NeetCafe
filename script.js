@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add more Chemistry chapters
     ],
     biology: [
+      { name: "» Plant Kingdom", url: "Biology/each chp qType/plantKingdom-qType.html" },
       { name: "» Biomolecules", url: "Biology/each chp qType/biomole-qType.html" },
       { name: "» Body Fluid & Circulation", url: "Biology/each chp qType/bodyFluid-qType.html" },
       { name: "» Excretory product & their elimination", url: "Biology/each chp qType/excretion-qType.html" },
-      
+      { name: "» Locomotion and movement", url: "Biology/each chp qType/locomotion-qType.html" },
       // Add more Biology chapters
     ]
   };
