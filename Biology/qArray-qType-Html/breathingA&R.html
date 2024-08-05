@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice NEET assertion-reason type questions on 'Breathing and exchange of gases.'. Test your knowledge with 15 key questions to excel in your NEET exam.">
+  <meta name="keywords" content="NEET, NEET quiz, assertion-reason questions, Breathing and exchange of gases, NEET preparation, important NEET questions, NEET exam practice">
+  <meta name="author" content="Neet Cafe">
+  <title>NEET Cafe Quiz - Breathing and exchange of gases: 15 Key Assertion-Reason Questions</title>
+  <link rel="stylesheet" href="https://Obaidulla28118.github.io/NeetCafe/quiz.css">
+  
+</head>
+<body>
+  <div class="app">
+    <h1>💥 NEET Cafe Quiz 💥</h1>
+    <div class="quiz">
+      <div class="progress-bar">
+        <span class="progress"></span>
+        <span class="total"></span> 
+      </div>
+      <div id="timer-container">
+        <div id="timer"></div>
+      </div>
+
+      
+      
+      <h2 id="question">Question goes here</h2>
+      
+      <div id="answer-buttons">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+
+      <div id="btn-container">
+        <button id="previous-btn">Previous</button>
+        <button id="explain-btn">👁️NCERT</button>
+        <button id="next-btn">Next</button>   
+      </div>
+       
+      <button class="thank-btn">❤️ Thank You ❤️ </button>
+
+      <div id="popup-container" class="popup-container">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <p id="explanation-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+   
+const questions = [
+  {
+    question: "» Assertion: The alveoli are the primary sites for the exchange of gases. <br><br>» Reason: Alveoli have thin walls and are surrounded by a dense network of capillaries, which facilitates efficient gas exchange.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. Alveoli are indeed the primary sites for gas exchange due to their thin walls and extensive capillary network."
+  },
+  {
+    question: "» Assertion: The diaphragm plays a key role in the process of inspiration. <br><br>» Reason: Contraction of the diaphragm increases the volume of the thoracic cavity, which creates a negative pressure and draws air into the lungs.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. The diaphragm's contraction indeed increases thoracic volume and decreases pressure to allow air intake."
+  },
+  {
+    question: "» Assertion: During expiration, the intra-pulmonary pressure increases. <br><br>» Reason: Relaxation of the diaphragm and intercostal muscles reduces the thoracic volume, leading to a rise in intra-pulmonary pressure.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. The increase in intra-pulmonary pressure during expiration is due to the reduction in thoracic volume."
+  },
+  {
+    question: "» Assertion: Tidal Volume (TV) is the volume of air that remains in the lungs after a forcible expiration. <br><br>» Reason: The volume of air that remains in the lungs after expiration is known as Residual Volume (RV), not Tidal Volume.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "D",
+    explanation: "Assertion is false, and the Reason is true. Tidal Volume refers to the amount of air inhaled or exhaled in a normal breath, while Residual Volume is the air left in the lungs after a forcible expiration."
+  },
+  {
+    question: "» Assertion: Emphysema is a chronic disorder in which alveolar walls are damaged <br><br>» Reason: The Oxygen dissociation curve is sigmoid in shape.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "B",
+    explanation: "Both Assertion and Reason are true, and the Reason does not correctly explains the Assertion. here Assertion and reason are mutually exclusive event.The sigmoid shape of the oxygen dissociation curve is due to the cooperative binding of oxygen molecules to hemoglobin."
+  },
+  {
+    question: "» Assertion: The rate of gas diffusion is influenced by the solubility of the gases in the diffusion membrane. <br><br>» Reason: Higher solubility of a gas increases the rate of its diffusion across the membrane.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. Gas diffusion rate is indeed influenced by the solubility of gases; higher solubility leads to faster diffusion."
+  },
+  {
+    question: "» Assertion: Carbon dioxide is transported in blood mainly as bicarbonate ions. <br><br>» Reason: About 70% of CO2 in blood is transported as bicarbonate ions, with the help of the enzyme carbonic anhydrase.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. The majority of CO2 is indeed transported as bicarbonate ions, facilitated by carbonic anhydrase."
+  },
+  {
+    question: "» Assertion: An increase in pCO2 leads to the release of oxygen from oxyhemoglobin. <br><br>» Reason: Increased pCO2 lowers the pH, which promotes the release of oxygen from hemoglobin.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. Increased pCO2 lowers the pH, which facilitates oxygen release from hemoglobin."
+  },
+  {
+    question: "» Assertion: The conducting part of the respiratory system includes the alveoli. <br><br>» Reason: The conducting part includes the trachea, bronchi, and bronchioles, while alveoli are part of the respiratory or exchange part.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "D",
+    explanation: "Assertion is false, and the Reason is true. The conducting part of the respiratory system does not include alveoli; it consists of trachea, bronchi, and bronchioles."
+  },
+  {
+    question: "» Assertion: The pleural fluid between the pleural membranes reduces friction during breathing. <br><br>» Reason: Pleural fluid provides lubrication, which is essential for smooth movement of the lungs during respiration.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. Pleural fluid indeed reduces friction and facilitates smooth lung movement during breathing."
+  },
+  {
+    question: "» Assertion: Hemoglobin’s binding of oxygen is influenced by the partial pressure of CO2. <br><br>» Reason: Higher pCO2 decreases the affinity of hemoglobin for oxygen, leading to its release in tissues.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. The affinity of hemoglobin for oxygen decreases with increased pCO2, promoting oxygen release."
+  },
+ 
+  {
+    question: "» Assertion: Respiratory rhythm is regulated by the medulla and pons regions of the brain. <br><br>» Reason: The medulla contains the respiratory rhythm centre, while the pons modulates its activity.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. The medulla is responsible for the rhythmic control of breathing, and the pons helps modulate this rhythm."
+  },
+  {
+    question: "» Assertion: Intra-pulmonary pressure is lower than atmospheric pressure during inspiration. <br><br>» Reason: During inspiration, the thoracic cavity expands, decreasing intra-pulmonary pressure to allow air to flow into the lungs.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. During inspiration, the expansion of the thoracic cavity lowers intra-pulmonary pressure below atmospheric pressure, enabling air intake."
+  },
+  {
+    question: "» Assertion: Oxygen is transported in blood both bound to hemoglobin and dissolved in plasma. <br><br>» Reason: About 97% of oxygen is carried bound to hemoglobin, and 3% is dissolved in plasma.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. Oxygen is transported in the blood as 97% bound to hemoglobin and 3% dissolved in plasma."
+  },
+  {
+    question: "» Assertion: In the tissues, where pO2 is low, oxygen is more readily released from hemoglobin. <br><br>» Reason: Lower pO2 in the tissues reduces the binding affinity of hemoglobin for oxygen, facilitating its release.",
+    options: {
+      A: "Both Assertion and Reason are true and Reason is the correct explanation of Assertion.",
+      B: "Both Assertion and Reason are true but Reason is not the correct explanation of Assertion.",
+      C: "Both Assertion and Reason are false.",
+      D: "Assertion is false but Reason is true."
+    },
+    correct_answer: "A",
+    explanation: "Both Assertion and Reason are true, and the Reason correctly explains the Assertion. In tissues with low pO2, hemoglobin's affinity for oxygen decreases, promoting oxygen release."
+  }
+];
+
+</script>
+<script src="https://Obaidulla28118.github.io/NeetCafe/quiz.js"></script>
+</body>
+    </html>
